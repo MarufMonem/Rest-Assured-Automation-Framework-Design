@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Removed template created files">
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberOptions/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberOptions/TestRunner.java" afterDir="false" />
+    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Added the add place and location pojo classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +40,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_directory_selection": "X:/Career/Learning/API/Rest Assured Framework Design/src/test/java",
-    "last_opened_file_path": "X:/Career/Learning/API/Rest Assured Framework Design/src/test/java/RA-Framework-Design"
+    "last_opened_file_path": "X:/Career/Learning/API/Rest Assured Framework Design/src/main/java/POJO"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="X:\Career\Learning\API\Rest Assured Framework Design\src\main\java\POJO" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680495748734</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added the add place and location pojo classes">
+      <created>1680496761547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680496761547</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +113,7 @@
     <MESSAGE value="Step definitions created for add place API scenario" />
     <MESSAGE value="Project name typo fixed" />
     <MESSAGE value="Removed template created files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed template created files" />
+    <MESSAGE value="Added the add place and location pojo classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the add place and location pojo classes" />
   </component>
 </project>
