@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Project name typo fixed">
+    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Removed template created files">
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumberOptions/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberOptions/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinations/StepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680495600250</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Removed template created files">
+      <created>1680495748734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680495748734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +98,7 @@
     <MESSAGE value="Add place API feature created" />
     <MESSAGE value="Step definitions created for add place API scenario" />
     <MESSAGE value="Project name typo fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project name typo fixed" />
+    <MESSAGE value="Removed template created files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed template created files" />
   </component>
 </project>

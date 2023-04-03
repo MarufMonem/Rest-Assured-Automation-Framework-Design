@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/main/java/features/placeValidation.feature",
+        features = "src/test/java/features/placeValidation.feature",
         glue = "stepDefinitions"
 )
 public class TestRunner {
