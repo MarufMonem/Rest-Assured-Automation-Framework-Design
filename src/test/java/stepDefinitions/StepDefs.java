@@ -77,7 +77,8 @@ public class StepDefs {
 
     @And("The {string} in response body is {string}")
     public void theInResponseBodyIs(String attributeName, String expectedValue) {
-        responseBody = res.toString();
+        responseBody = responseJson.asString();
+        System.out.println(responseBody);
         js = new JsonPath(responseBody);
         String attributeValue = js.get(attributeName);
         Assert.assertEquals(attributeValue,expectedValue);
