@@ -3,6 +3,7 @@ package stepDefinitions;
 import POJO.AddPlace;
 import POJO.Location;
 import Resources.TestDataBuild;
+import Resources.Utils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,7 +23,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class StepDefs {
+public class StepDefs extends Utils{
     RequestSpecification req;
     ResponseSpecification resSpec;
     RequestSpecification res;
@@ -35,12 +36,7 @@ public class StepDefs {
         TestDataBuild td = new TestDataBuild();
         ap=td.addPlacePayLoad();
 
-
-        req = new RequestSpecBuilder().setContentType(ContentType.JSON)
-                .setBaseUri("https://rahulshettyacademy.com")
-                .addQueryParam("key", "qaclick123")
-                .setContentType(ContentType.JSON)
-                .build();
+        req = requestSpecifications();
 
         resSpec = new ResponseSpecBuilder()
                 .expectStatusCode(200)
