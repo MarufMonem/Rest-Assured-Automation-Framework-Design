@@ -16,6 +16,7 @@ import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 
@@ -28,7 +29,7 @@ public class StepDefs extends Utils{
     String responseBody;
     JsonPath js;
     @Given("Add place payload")
-    public void addPlacePayload() throws FileNotFoundException {
+    public void addPlacePayload() throws IOException {
         //payload
         TestDataBuild td = new TestDataBuild();
         ap=td.addPlacePayLoad();
