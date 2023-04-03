@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import POJO.AddPlace;
 import POJO.Location;
+import Resources.TestDataBuild;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,22 +32,9 @@ public class StepDefs {
     JsonPath js;
     @Given("Add place payload")
     public void addPlacePayload() {
-        ap = new AddPlace();
-        ap.setAccuracy(50);
-        ap.setAddress("Dhaka");
-        ap.setLanguage("Bangla");
-        ap.setName("Maruf");
-        ap.setPhone_number("12345");
-        ap.setWebsite("www.google.com");
-        List<String> type = new ArrayList<String>();
-        type.add("Phone");
-        type.add("laptop");
-        ap.setTypes(type);
+        TestDataBuild td = new TestDataBuild();
+        ap=td.addPlacePayLoad();
 
-        Location l = new Location();
-        l.setLat(-38.3834);
-        l.setLng(33.4273);
-        ap.setLocation(l);
 
         req = new RequestSpecBuilder().setContentType(ContentType.JSON)
                 .setBaseUri("https://rahulshettyacademy.com")
