@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Add place API feature created">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cucumberOptions/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/placeValidation.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stepDefinations/StepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Project name typo fixed">
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberOptions/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberOptions/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinations/StepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "X:/Career/Learning/API/Rest Assured Framework Design/src/test/java",
     "last_opened_file_path": "X:/Career/Learning/API/Rest Assured Framework Design/src/test/java/RA-Framework-Design"
   }
 }]]></component>
@@ -68,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680493592757</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Step definitions created for add place API scenario">
+      <created>1680495600250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680495600250</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +90,8 @@
     <MESSAGE value="Maven project created" />
     <MESSAGE value="Dependencies added" />
     <MESSAGE value="Add place API feature created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add place API feature created" />
+    <MESSAGE value="Step definitions created for add place API scenario" />
+    <MESSAGE value="Project name typo fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project name typo fixed" />
   </component>
 </project>
