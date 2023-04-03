@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Created a new class for add place payload">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Resources/Utils.java" afterDir="false" />
+    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Separated the request specification">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Resources/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Resources/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680562642302</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Separated the request specification">
+      <created>1680562963957</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680562963957</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +168,7 @@
     <MESSAGE value="Step definition completed for Given, When and Then" />
     <MESSAGE value="initial tests ran successfully" />
     <MESSAGE value="Created a new class for add place payload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a new class for add place payload" />
+    <MESSAGE value="Separated the request specification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated the request specification" />
   </component>
 </project>
