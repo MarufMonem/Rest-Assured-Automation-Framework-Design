@@ -1,21 +1,19 @@
 package stepDefinitions;
 
 import POJO.AddPlace;
+import Resources.APIResources;
 import Resources.TestDataBuild;
 import Resources.Utils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
@@ -25,7 +23,7 @@ public class StepDefs extends Utils{
     ResponseSpecification resSpec;
     RequestSpecification res;
     AddPlace ap;
-    Response responseJson;
+    Response response;
     String responseBody;
     JsonPath js;
     @Given("Add place payload")
@@ -45,21 +43,31 @@ public class StepDefs extends Utils{
 //    }
 
 
-    @When("User calls {string} with Post http request")
-    public void userCallsWithPostHttpRequest(String arg0) {
-        responseJson = res.when()
-                .post("/maps/api/place/add/json")
-                .then().extract().response();
+    @When("User calls {string} with {string} http request")
+    public void userCallsWithPostHttpRequest(String arg0, String method) {
+        APIResources resourceObject = APIResources.valueOf(arg0);
+        String apiValue = resourceObject.getResource();
+
+        if (method.equalsIgnoreCase("post")){
+            response = res.when()
+                    .post(apiValue);
+        } else if (method.equalsIgnoreCase("delete")) {
+            response = res.when()
+                    .delete(apiValue);
+        }
     }
 
-    @Then("The API call will get success with status code {int}")
+    @Then("The API call will get success with" +
+            "" +
+            "" +
+            " status code {int}")
     public void theAPICallWillGetSuccessWithStatusCode(int expectedStatusCode) {
-        Assert.assertEquals(responseJson.getStatusCode(),expectedStatusCode);
+        Assert.assertEquals(response.getStatusCode(),expectedStatusCode);
     }
 
     @And("The {string} in response body is {string}")
     public void theInResponseBodyIs(String attributeName, String expectedValue) {
-        responseBody = responseJson.asString();
+        responseBody = response.asString();
         System.out.println(responseBody);
         js = new JsonPath(responseBody);
         String attributeValue = js.get(attributeName);
