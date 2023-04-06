@@ -29,20 +29,20 @@ public class StepDefs extends Utils{
     String responseBody;
     JsonPath js;
     @Given("Add place payload")
-    public void addPlacePayload() throws IOException {
-        //payload
-        TestDataBuild td = new TestDataBuild();
-        ap=td.addPlacePayLoad();
-        // Request specification
-        req = requestSpecifications();
-
-//        resSpec = new ResponseSpecBuilder()
-//                .expectStatusCode(200)
-//                .expectContentType(ContentType.JSON).build();
-
-        res = given().spec(req).body(ap);
-
-    }
+//    public void addPlacePayload() throws IOException {
+//        //payload
+//        TestDataBuild td = new TestDataBuild();
+//        ap=td.addPlacePayLoad();
+//        // Request specification
+//        req = requestSpecifications();
+//
+////        resSpec = new ResponseSpecBuilder()
+////                .expectStatusCode(200)
+////                .expectContentType(ContentType.JSON).build();
+//
+//        res = given().spec(req).body(ap);
+//
+//    }
 
 
     @When("User calls {string} with Post http request")
@@ -64,5 +64,14 @@ public class StepDefs extends Utils{
         js = new JsonPath(responseBody);
         String attributeValue = js.get(attributeName);
         Assert.assertEquals(attributeValue,expectedValue);
+    }
+
+    @Given("Add place payload with {string} {string} {string}")
+    public void addPlacePayloadWith(String name, String language, String address) throws IOException {
+        TestDataBuild td = new TestDataBuild();
+        ap=td.addPlacePayLoad(name, language, address);
+        // Request specification
+        req = requestSpecifications();
+        res = given().spec(req).body(ap);
     }
 }

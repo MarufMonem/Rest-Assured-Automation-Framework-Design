@@ -8,12 +8,12 @@ import java.util.List;
 
 public class TestDataBuild {
 
-    public AddPlace addPlacePayLoad(){
+    public AddPlace addPlacePayLoad(String name, String language, String address){
         AddPlace ap = new AddPlace();
         ap.setAccuracy(50);
-        ap.setAddress("Dhaka");
-        ap.setLanguage("Bangla");
-        ap.setName("Maruf");
+        ap.setAddress(address);
+        ap.setLanguage(language);
+        ap.setName(name);
         ap.setPhone_number("12345");
         ap.setWebsite("www.google.com");
         List<String> type = new ArrayList<String>();

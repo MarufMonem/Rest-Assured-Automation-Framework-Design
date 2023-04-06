@@ -10,20 +10,22 @@ import java.io.*;
 import java.util.Properties;
 
 public class Utils {
-    RequestSpecification req;
+    public static RequestSpecification req;
 
     public RequestSpecification requestSpecifications() throws IOException {
 
-        PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
-        req = new RequestSpecBuilder().setContentType(ContentType.JSON)
-                .addFilter(RequestLoggingFilter.logRequestTo(log))
-                .addFilter(ResponseLoggingFilter.logResponseTo(log))
-                .setBaseUri(getGlobalValue("baseURL"))
-                .addQueryParam("key", "qaclick123")
-                .setContentType(ContentType.JSON)
-                .build();
 
-        return req;
+        if(req == null) {
+            PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
+            req = new RequestSpecBuilder().setContentType(ContentType.JSON)
+                    .addFilter(RequestLoggingFilter.logRequestTo(log))
+                    .addFilter(ResponseLoggingFilter.logResponseTo(log))
+                    .setBaseUri(getGlobalValue("baseURL"))
+                    .addQueryParam("key", "qaclick123")
+                    .setContentType(ContentType.JSON)
+                    .build();
+        }
+        return  req;
     }
 
     public String getGlobalValue(String key) throws IOException {
