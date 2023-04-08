@@ -26,7 +26,9 @@ public class StepDefs extends Utils{
     Response response;
     String responseBody;
     JsonPath js;
-    @Given("Add place payload")
+
+
+//    @Given("Add place payload")
 //    public void addPlacePayload() throws IOException {
 //        //payload
 //        TestDataBuild td = new TestDataBuild();
@@ -54,6 +56,9 @@ public class StepDefs extends Utils{
         } else if (method.equalsIgnoreCase("delete")) {
             response = res.when()
                     .delete(apiValue);
+        } else if (method.equalsIgnoreCase("get")) {
+            response = res.when()
+                    .get(apiValue);
         }
     }
 
@@ -67,11 +72,7 @@ public class StepDefs extends Utils{
 
     @And("The {string} in response body is {string}")
     public void theInResponseBodyIs(String attributeName, String expectedValue) {
-        responseBody = response.asString();
-        System.out.println(responseBody);
-        js = new JsonPath(responseBody);
-        String attributeValue = js.get(attributeName);
-        Assert.assertEquals(attributeValue,expectedValue);
+        Assert.assertEquals(getJsonPath(response, attributeName),expectedValue);
     }
 
     @Given("Add place payload with {string} {string} {string}")
@@ -81,5 +82,12 @@ public class StepDefs extends Utils{
         // Request specification
         req = requestSpecifications();
         res = given().spec(req).body(ap);
+    }
+
+
+    @And("Verify place_ID created  maps to {string} using {string}")
+    public void verifyPlace_IDCreatedMapsToUsing(String placeName, String apiName) {
+        String placeID = getJsonPath(response, "place_id");
+        res = given().spec(req).queryParam("place_id", placeID);
     }
 }

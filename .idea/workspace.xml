@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="Added enum to handle the get,add and delete APIs">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Resources/APIResources.java" afterDir="false" />
+    <list default="true" id="5316927e-7330-408e-bef7-380473ad0595" name="Changes" comment="handling GET request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logging.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Resources/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Resources/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/placeValidation.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/StepDefs.java" afterDir="false" />
     </list>
@@ -168,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680753807452</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Made request type handling dynamic">
+      <created>1680755938338</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680755938338</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +205,19 @@
     <MESSAGE value="Using global.properties to access the baseURI" />
     <MESSAGE value="Fixed the logging.txt file replacing info for each run problem" />
     <MESSAGE value="Added enum to handle the get,add and delete APIs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added enum to handle the get,add and delete APIs" />
+    <MESSAGE value="Made request type handling dynamic" />
+    <MESSAGE value="handling GET request" />
+    <option name="LAST_COMMIT_MESSAGE" value="handling GET request" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Resources/Utils.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
