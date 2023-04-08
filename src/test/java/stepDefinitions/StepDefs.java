@@ -89,5 +89,10 @@ public class StepDefs extends Utils{
     public void verifyPlace_IDCreatedMapsToUsing(String placeName, String apiName) {
         String placeID = getJsonPath(response, "place_id");
         res = given().spec(req).queryParam("place_id", placeID);
+
+        userCallsWithPostHttpRequest(apiName, "GET");
+
+        Assert.assertEquals(getJsonPath(response, "name"), placeName);
+
     }
 }
