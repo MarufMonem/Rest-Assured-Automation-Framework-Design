@@ -19,30 +19,15 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 public class StepDefs extends Utils{
-    RequestSpecification req;
+    static RequestSpecification req;
     ResponseSpecification resSpec;
     RequestSpecification res;
     AddPlace ap;
     Response response;
     String responseBody;
     JsonPath js;
-
-
-//    @Given("Add place payload")
-//    public void addPlacePayload() throws IOException {
-//        //payload
-//        TestDataBuild td = new TestDataBuild();
-//        ap=td.addPlacePayLoad();
-//        // Request specification
-//        req = requestSpecifications();
-//
-////        resSpec = new ResponseSpecBuilder()
-////                .expectStatusCode(200)
-////                .expectContentType(ContentType.JSON).build();
-//
-//        res = given().spec(req).body(ap);
-//
-//    }
+    static String placeID;
+    static TestDataBuild td;
 
 
     @When("User calls {string} with {string} http request")
@@ -77,7 +62,7 @@ public class StepDefs extends Utils{
 
     @Given("Add place payload with {string} {string} {string}")
     public void addPlacePayloadWith(String name, String language, String address) throws IOException {
-        TestDataBuild td = new TestDataBuild();
+        td = new TestDataBuild();
         ap=td.addPlacePayLoad(name, language, address);
         // Request specification
         req = requestSpecifications();
@@ -87,12 +72,19 @@ public class StepDefs extends Utils{
 
     @And("Verify place_ID created  maps to {string} using {string}")
     public void verifyPlace_IDCreatedMapsToUsing(String placeName, String apiName) {
-        String placeID = getJsonPath(response, "place_id");
+        placeID = getJsonPath(response, "place_id");
         res = given().spec(req).queryParam("place_id", placeID);
 
         userCallsWithPostHttpRequest(apiName, "GET");
 
         Assert.assertEquals(getJsonPath(response, "name"), placeName);
 
+    }
+
+    @Given("DeletePlace payload")
+    public void deleteplacePayload() throws IOException {
+//        req = requestSpecifications();
+        res = given().log().all().spec(req).body(td.deletePayload(placeID));
+//        userCallsWithPostHttpRequest("DeletePlaceAPI", "POST");
     }
 }

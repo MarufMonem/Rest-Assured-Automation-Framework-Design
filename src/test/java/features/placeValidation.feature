@@ -8,8 +8,17 @@ Feature: Validating place APIs
     And The "scope" in response body is "APP"
     And Verify place_ID created  maps to "<name>" using "getPlaceAPI"
 
-  Examples:
-    | name    | language | address            |
-    | A house | English  | World cross center |
-    | Maruf   | Bangla   | Dhaka              |
+    Examples:
+      | name    | language | address            |
+      | A house | English  | World cross center |
+      | Maruf   | Bangla   | Dhaka              |
+
+  Scenario: Verify if the the Delete Place API is working
+    Given DeletePlace payload
+    When User calls "DeletePlaceAPI" with "Post" http request
+    And The "status" in response body is "OK"
+
+
+
+
 
