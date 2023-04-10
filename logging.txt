@@ -16,18 +16,18 @@ Body:
         "lng": 33.4273
     },
     "accuracy": 50,
-    "name": "Anik",
+    "name": "A house",
     "phone_number": "12345",
-    "address": "Dhaka",
+    "address": "World cross center",
     "types": [
         "Phone",
         "laptop"
     ],
     "website": "www.google.com",
-    "language": "Bangla"
+    "language": "English"
 }
 HTTP/1.1 200 OK
-Date: Sat, 08 Apr 2023 08:38:23 GMT
+Date: Mon, 10 Apr 2023 04:34:43 GMT
 Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "5e5cc952f477129c4bb72a18889c6358",
+    "place_id": "e91574853e2910f644d89e99192f9959",
     "scope": "APP",
-    "reference": "b7f9be5d782655ae7552cf796f7f7293b7f9be5d782655ae7552cf796f7f7293",
-    "id": "b7f9be5d782655ae7552cf796f7f7293"
+    "reference": "b06f99cd051a390d96db569fefce3d68b06f99cd051a390d96db569fefce3d68",
+    "id": "b06f99cd051a390d96db569fefce3d68"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=5e5cc952f477129c4bb72a18889c6358
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=e91574853e2910f644d89e99192f9959
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=5e5cc952f477129c4bb72a18889c6358
+				place_id=e91574853e2910f644d89e99192f9959
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,13 +59,13 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Sat, 08 Apr 2023 08:38:24 GMT
+Date: Mon, 10 Apr 2023 04:34:44 GMT
 Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 199
+Content-Length: 216
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -76,15 +76,15 @@ Content-Type: application/json;charset=UTF-8
         "longitude": "33.4273"
     },
     "accuracy": "50",
-    "name": "Anik",
+    "name": "A house",
     "phone_number": "12345",
-    "address": "Dhaka",
+    "address": "World cross center",
     "types": "Phone,laptop",
     "website": "www.google.com",
-    "language": "Bangla"
+    "language": "English"
 }
 Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
@@ -96,20 +96,75 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "place_id": "5e5cc952f477129c4bb72a18889c6358"
+    "location": {
+        "lat": -38.3834,
+        "lng": 33.4273
+    },
+    "accuracy": 50,
+    "name": "Maruf",
+    "phone_number": "12345",
+    "address": "Dhaka",
+    "types": [
+        "Phone",
+        "laptop"
+    ],
+    "website": "www.google.com",
+    "language": "Bangla"
 }
 HTTP/1.1 200 OK
-Date: Sat, 08 Apr 2023 08:38:25 GMT
+Date: Mon, 10 Apr 2023 04:34:44 GMT
 Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
+Content-Length: 194
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
 
 {
-    "status": "OK"
+    "status": "OK",
+    "place_id": "2cb1bd10a356ead2f0ee39bcbe9ee13b",
+    "scope": "APP",
+    "reference": "ddd6c8a5ba215d90c0ec3edd2f28cf09ddd6c8a5ba215d90c0ec3edd2f28cf09",
+    "id": "ddd6c8a5ba215d90c0ec3edd2f28cf09"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=2cb1bd10a356ead2f0ee39bcbe9ee13b
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=2cb1bd10a356ead2f0ee39bcbe9ee13b
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 10 Apr 2023 04:34:44 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 200
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.3834",
+        "longitude": "33.4273"
+    },
+    "accuracy": "50",
+    "name": "Maruf",
+    "phone_number": "12345",
+    "address": "Dhaka",
+    "types": "Phone,laptop",
+    "website": "www.google.com",
+    "language": "Bangla"
 }
